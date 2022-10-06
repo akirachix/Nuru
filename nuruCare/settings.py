@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'nuru',
+    'phone_number_field',
 ]
 
 MIDDLEWARE = [
@@ -75,12 +77,14 @@ WSGI_APPLICATION = 'nuruCare.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'nurucareproject',
+        'USER': 'nuruprojectuser',
+        'PASSWORD': 'nuru2022',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
-
-
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
