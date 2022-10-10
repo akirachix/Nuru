@@ -20,12 +20,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-3h(o!44pd9#v-8@*b8o-n4&t0na+1t8t_r^x+musc$x0^8%bru'
+SECRET_KEY = 'ngrok config add-authtoken 2FqOBCFknohX74NfJQ6fKepqdiL_36pJ6T4FFEVmDLFK8UhSu'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    '1926-197-232-143-191.eu.ngrok.io',                                           
+                                   
+]
 
 
 # Application definition
@@ -38,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'nuru',
+    'SMS',
 ]
 
 MIDDLEWARE = [
