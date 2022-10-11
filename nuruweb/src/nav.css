@@ -1,0 +1,51 @@
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+  
+  
+/* .topnav a.active{
+  background-color: #310321;
+  color: white;
+} */
+
+.btn {
+  background-color: #0e3103;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 30px;
+  margin-left: 10%;
+  margin-top: -1%;
+  
+}
+.topnav
+{
+  background-color: #ac829d;
+  padding: 2%;
+}
+.navbar
+{
+  margin-left: 70%;
+}
+.image img
+{
+  width: 7%;
+  height: 15vh;
+  margin-top: -4.5%;
+  margin-left: -86%;
+}
+.image
+{
+  height: 2vh;
+}
+  
