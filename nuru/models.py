@@ -9,7 +9,8 @@ class Mother(models.Model):
     child_name = models.CharField(max_length=30)
     child_date_of_birth = models.DateField()
     registration_date = models.DateField()
- 
+    # active = models.BooleanField()
+
 class Information(models.Model):
     neonatal_information=models.CharField(max_length=250)
     clinical_information=models.CharField(max_length=250)
@@ -17,4 +18,5 @@ class Information(models.Model):
 class Notification(models.Model):
     message = models.CharField(max_length=30)
     title = models.CharField(max_length=20)
-    date_time = models.DateTimeField()
+    date_time = models.DateTimeField(null=True)
+
