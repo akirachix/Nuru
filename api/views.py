@@ -7,10 +7,12 @@ class MotherViewSet(viewsets.ModelViewSet):
     serializer_class = MotherSerializer
 
 class InformationViewSet(viewsets.ModelViewSet):
-    queryset=models.Mother.objects.all()
+    queryset=models.Information.objects.all()
     serializer_class = InformationSerializer
 
+
 class NotificationViewSet(viewsets.ModelViewSet):
-    queryset=models.Mother.objects.all()
-    serializer_class = NotificationSerializer    
-    
+    queryset=models.Notification.objects.all()
+    serializer_class = NotificationSerializer
+
+
