@@ -20,4 +20,7 @@ from nuru.views import contact_upload
 
 urlpatterns =[
     path('admin/', admin.site.urls),
+    path('api/',include('api.urls')),
+    path('sms/',include('SMS.urls'))
+
 ]
