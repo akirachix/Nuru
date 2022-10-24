@@ -27,12 +27,8 @@ SECRET_KEY = 'ngrok config add-authtoken 2FqOBCFknohX74NfJQ6fKepqdiL_36pJ6T4FFEV
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    '127.0.0.1',
-    '1926-197-232-143-191.eu.ngrok.io',     
-    'afternoon-dusk-68082.herokuapp.com'                                      
-                                   
-]
+ALLOWED_HOSTS = ['*']                   
+
 
 
 # Application definition
