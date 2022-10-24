@@ -29,7 +29,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
-    '1926-197-232-143-191.eu.ngrok.io',                                           
+    '1926-197-232-143-191.eu.ngrok.io',     
+    'afternoon-dusk-68082.herokuapp.com'                                      
                                    
 ]
 
