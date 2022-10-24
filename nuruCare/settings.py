@@ -92,7 +92,7 @@ DATABASES = {
         'USER': 'nuruprojectuser',
         'PASSWORD': 'nuru2022',
         'HOST': 'localhost',
-        'PORT': '5432',
+        'PORT': 5432,
     }
 }
 # Password validation
