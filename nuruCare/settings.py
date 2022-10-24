@@ -87,7 +87,7 @@ DATABASES = {
         'NAME': 'nuru',
         'USER': 'nuruuser',
         'PASSWORD': 'nurupass',
-        'HOST': 'https://whispering-hamlet-84809.herokuapp.com/',
+        'HOST': 'localhost',
         'PORT': '5432',
     }
 }
