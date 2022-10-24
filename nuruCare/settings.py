@@ -88,9 +88,9 @@ WSGI_APPLICATION = 'nuruCare.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'nurucareproject',
-        'USER': 'nuruprojectuser',
-        'PASSWORD': 'nuru2022',
+        'NAME': 'nuru',
+        'USER': 'nuruuser',
+        'PASSWORD': 'nurupass',
         'HOST': 'localhost',
         'PORT': '5432',
     }
