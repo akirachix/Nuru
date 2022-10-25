@@ -27,7 +27,7 @@ SECRET_KEY = 'ngrok config add-authtoken 2FqOBCFknohX74NfJQ6fKepqdiL_36pJ6T4FFEV
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']                   
+ALLOWED_HOSTS = ['127.0.0.1']              
 
 
 
