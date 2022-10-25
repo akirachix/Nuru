@@ -87,8 +87,8 @@ DATABASES = {
         'NAME': 'nuru',
         'USER': 'nuruuser',
         'PASSWORD': 'nurupass',
-        # 'HOST': 'localhost',
-        # 'PORT': '5432',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 # Password validation
