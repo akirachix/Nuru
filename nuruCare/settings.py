@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'nuruCare.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'nuru',
         'USER': 'nuruuser',
         'PASSWORD': 'nurupass',
