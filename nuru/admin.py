@@ -1,13 +1,13 @@
 from django.contrib import admin
 
-from nuru.models import Information, Mother, Notification
+from nuru.models import Information, Notification, Users
 
 # Register your models here.
-class MotherAdmin(admin.ModelAdmin):
-    list_display= ('first_name','last_name')
-    search_fields = ('first_name', 'phone_number')
+class UsersAdmin(admin.ModelAdmin):
+    list_display= ('full_name','child_name')
+    search_fields = ('full_name', 'child_name')
 
-admin.site.register(Mother, MotherAdmin)
+admin.site.register(Users, UsersAdmin)
 
 class InformationAdmin(admin.ModelAdmin):
     list_display= ('neonatal_information','clinical_information')

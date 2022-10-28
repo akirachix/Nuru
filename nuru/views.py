@@ -12,7 +12,7 @@ from dateutil.parser import parse
 import csv, io
 from django.contrib.auth.decorators import permission_required
 
-from nuru.models import Mother
+from nuru.models import Users
 
 @permission_required('admin.can_add_log_entry')
 def contact_upload(request):
@@ -42,16 +42,17 @@ def contact_upload(request):
     next(io_string)
     contact_upload= csv.reader(io_string,delimiter=',', quotechar="|")
     print(contact_upload)
-    for first_name,last_name,phone_number,child_name,child_date_of_birth,registration_date, *__ in contact_upload:
+    for full_name,phone_number,child_name,child_date_of_birth, appointment_date,registration_date, *__ in contact_upload:
         dt = parse(child_date_of_birth)
         dts = parse(registration_date)
-        created=Mother( 
-        first_name=first_name,
-        last_name=last_name,
-        phone_number=phone_number,
+        created=Users( 
+        full_name=full_name,
         child_name=child_name,
         child_date_of_birth=dt,
-        registration_date=dts
+        registration_date=dts,
+        phone_number=phone_number,
+        appointment_date = appointment_date
+
         )
         print(created)
         created.save()    

@@ -25,3 +25,4 @@ urlspatterns=[
     path('nuru/',include('nuru.urls')),
 ]
 
+

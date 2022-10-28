@@ -3,13 +3,13 @@ from django.db import models
 
 # Create your models here.
 
-class Mother(models.Model):
-    first_name= models.CharField(max_length=20 )
-    last_name= models.CharField(max_length=20)
+class Users(models.Model):
+    full_name= models.CharField(max_length=20 )
     phone_number= models.CharField(max_length=15)
     child_name = models.CharField(max_length=30)
     child_date_of_birth = models.DateField()
     registration_date = models.DateField()
+    appointment_date = models.DateField()
 
 class category(models.Model):
     neonatal_information=models.CharField(max_length=250)

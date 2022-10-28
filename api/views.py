@@ -1,10 +1,10 @@
 from rest_framework import viewsets
-from .serializers import MotherSerializer,InformationSerializer,NotificationSerializer
+from .serializers import InformationSerializer,NotificationSerializer, UsersSerializer
 from nuru import models
 
-class MotherViewSet(viewsets.ModelViewSet):
-    queryset=models.Mother.objects.all()
-    serializer_class = MotherSerializer
+class UsersViewSet(viewsets.ModelViewSet):
+    queryset=models.Users.objects.all()
+    serializer_class = UsersSerializer
 
 class InformationViewSet(viewsets.ModelViewSet):
     queryset=models.Information.objects.all()
