@@ -46,6 +46,9 @@ INSTALLED_APPS = [
     'SMS',
 ]
 
+
+
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -134,3 +137,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = "home"
 LOGOUT_REDIRECT_URL = "home"  
 django_heroku.settings(locals())
+# AUTH_USER_MODEL = 'nuru.user'

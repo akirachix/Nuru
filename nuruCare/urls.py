@@ -15,13 +15,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from nuru.api.views import registration_views
 
-from nuru.views import contact_upload
+# from nuru.models import Users
+from nuru.views import(
+    registration_views,
+)
+
 
 urlpatterns =[
     path('admin/', admin.site.urls),
-    # path('nuru',include('contact_upload')),
+    # path('nuru',include('Users')),
     path('api/',include('api.urls')),
-    path('sms/',include('SMS.urls'))
+    path('sms/',include('SMS.urls')),
+    path('api/nuru/', include('nuru_api.urls','nuru_api')),
+    path('register/', registration_views, name='register'),
 
 ]

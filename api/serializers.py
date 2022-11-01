@@ -1,7 +1,12 @@
 from dataclasses import field, fields
+from operator import mod
 from pyexpat import model
 from rest_framework import serializers
-from nuru.models import Information, Notification, Users
+from nuru.models import Information,  Notification, Users
+from rest_framework.validators import UniqueValidator
+from django.contrib.auth.password_validation import validate_password
+
+
 
 
 class UsersSerializer(serializers.ModelSerializer):
@@ -21,4 +26,5 @@ class NotificationSerializer(serializers.ModelSerializer):
         fields=('title','message','date_time')
 
 
-    
+
+
