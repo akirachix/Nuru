@@ -8,7 +8,7 @@ class Users(models.Model):
     child_name = models.CharField(max_length=30)
     child_date_of_birth = models.DateField()
     registration_date = models.DateField()
-    appointment_dates = models.DateField()
+    appointment_date= models.DateField()
 
     
 class category(models.Model):
