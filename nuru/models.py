@@ -21,6 +21,6 @@ class Information(models.Model):
 
 class Notification(models.Model):
     title=models.CharField(max_length=30)
-    message = models.CharField(max_length=200)
+    message = models.CharField(max_length=250)
     date_time = models.DateTimeField(null=True)
 
