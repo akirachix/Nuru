@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'api',
     'rest_framework',
     'nuru',
-    'SMS',
+    'SMS'
+    
 ]
 
 MIDDLEWARE = [
@@ -134,3 +135,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = "home"
 LOGOUT_REDIRECT_URL = "home"  
 django_heroku.settings(locals())
+

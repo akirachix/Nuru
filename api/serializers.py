@@ -1,4 +1,4 @@
-from dataclasses import field, fields
+# from dataclasses import field, fields
 from pyexpat import model
 from rest_framework import serializers
 from nuru.models import Information, Notification, Users
@@ -7,7 +7,7 @@ from nuru.models import Information, Notification, Users
 class UsersSerializer(serializers.ModelSerializer):
     class Meta:
         model = Users
-        fields =('full_name','phone_number' ,'child_name','child_date_of_birth','registration_date','appointment_date')
+        fields =('full_name','Phone_number' ,'child_name','child_date_of_birth','registration_date','appointment_date')
 
 class InformationSerializer(serializers.ModelSerializer):
     class Meta:
