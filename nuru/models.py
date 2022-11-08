@@ -7,9 +7,9 @@ class Users(models.Model):
     full_name= models.CharField(max_length=20,null=True)
     Phone_number=models.CharField(max_length=15, null=True)
     child_name = models.CharField(max_length=30, null=True)
-    child_date_of_birth = models.DateTimeField(default=timezone.now)
-    registration_date = models.DateTimeField(default=timezone.now)
-    appointment_date= models.DateTimeField(default=timezone.now)
+    child_date_of_birth = models.DateField()
+    registration_date = models.DateField()
+    appointment_date= models.DateField()
 
     
 class category(models.Model):
@@ -23,6 +23,6 @@ class Information(models.Model):
 class Notification(models.Model):
     title=models.CharField(max_length=30, null=True)
     message = models.CharField(max_length=250, null=True)
-    date_time = models.DateTimeField(default=timezone.now)
+    date_time = models.DateField()
 
 
