@@ -5,7 +5,7 @@ from re import template
 from venv import create
 from django.shortcuts import render
 from dateutil.parser import parse
-
+from .form import UserRegisrationForm
 
 # Create your views here.easy on me adele
 
@@ -59,6 +59,14 @@ def contact_upload(request):
         
         context={}
         return render(request,template,context)
-        
+
+
     
-    
+def register_user(request):
+    if request.method == "POST":
+        form = UserRegisrationForm(request.POST)
+        if form.is_valid():
+            form.save()
+    else:
+        form = UserRegisrationForm()
+    return render(request,"registration/register_user.html",{"form":form})
