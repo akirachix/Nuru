@@ -17,7 +17,7 @@ class InformationSerializer(serializers.ModelSerializer):
 class NotificationSerializer(serializers.ModelSerializer):
     class Meta:
         model=Notification
-        fields=('title','message','date_time')
+        fields=('Title','message','date_time')
 
 
 class MessageSerializer(serializers.ModelSerializer):
