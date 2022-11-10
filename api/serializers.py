@@ -23,7 +23,7 @@ class NotificationSerializer(serializers.ModelSerializer):
 class MessageSerializer(serializers.ModelSerializer):
     class Meta:
         model=Message
-        fields=('Phone_number','date_time','message',)
+        fields=('Phone_number','date_time','message')
 
 
 
