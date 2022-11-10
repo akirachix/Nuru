@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from nuru.models import Information, Notification, Users
+from nuru.models import Information, Notification, Users ,Message
 
 # Register your models here.
 class UsersAdmin(admin.ModelAdmin):
@@ -20,3 +20,8 @@ class NotificationAdmin(admin.ModelAdmin):
     search_fields = ('message','title')
 
 admin.site.register(Notification, NotificationAdmin)
+
+class MessageAdmin(admin.ModelAdmin):
+    list_display= ('Phone_number','date_time','message')
+    search_fields = ('Phone_number','date_time','message')
+admin.site.register(Message, MessageAdmin)
