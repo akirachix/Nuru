@@ -1,7 +1,6 @@
-# from dataclasses import field, fields
-from pyexpat import model
+# from dataclasses import field, field
 from rest_framework import serializers
-from nuru.models import Information, Notification, Users
+from nuru.models import Information, Notification, Users,Message
 
 
 class UsersSerializer(serializers.ModelSerializer):
@@ -19,6 +18,14 @@ class NotificationSerializer(serializers.ModelSerializer):
     class Meta:
         model=Notification
         fields=('title','message','date_time')
+
+
+class MessageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=Message
+        fields=('Phone_number','message','date_time')
+
+
 
 
     

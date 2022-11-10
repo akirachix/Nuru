@@ -1,5 +1,5 @@
 from rest_framework import viewsets
-from .serializers import InformationSerializer,NotificationSerializer, UsersSerializer
+from .serializers import InformationSerializer,NotificationSerializer, UsersSerializer,MessageSerializer
 from nuru import models
 
 class UsersViewSet(viewsets.ModelViewSet):
@@ -14,5 +14,11 @@ class InformationViewSet(viewsets.ModelViewSet):
 class NotificationViewSet(viewsets.ModelViewSet):
     queryset=models.Notification.objects.all()
     serializer_class = NotificationSerializer
+
+
+class MessageViewSet(viewsets.ModelViewSet):
+    queryset=models.Message.objects.all()
+    serializer_class = MessageSerializer
+
 
 
