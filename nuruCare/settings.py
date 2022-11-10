@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'api',
     'rest_framework',
     'nuru',
-    'SMS'
+    'SMS',
     
 ]
 

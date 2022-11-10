@@ -29,5 +29,5 @@ class Notification(models.Model):
 class Message(models.Model):
     Phone_number=models.CharField(max_length=15,null=True)
     date_time = models.DateField()
-    message = models.CharField(max_length=250,null=True)
+    message = models.CharField(max_length=300,null=True)
 

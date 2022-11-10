@@ -27,7 +27,7 @@ urlspatterns=[
     path("register/", register_user, name="registration"),
     path('nuru/',include('nuru.urls')),
     path("message/", name="message"),
-    # path('message/',('SMS.urls')),
+
 ]
 
 
