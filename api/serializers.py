@@ -1,4 +1,4 @@
-# from dataclasses import field, field
+
 from rest_framework import serializers
 from nuru.models import Information, Notification, Users,Message
 
@@ -23,7 +23,8 @@ class NotificationSerializer(serializers.ModelSerializer):
 class MessageSerializer(serializers.ModelSerializer):
     class Meta:
         model=Message
-        fields=('Phone_number','message','date_time')
+        fields=('Phone_number','date_time','message',)
+
 
 
 
