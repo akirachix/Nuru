@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils import timezone
-# from phonenumber_field.formfields import PhoneNumberField
+from phonenumber_field.formfields import PhoneNumberField
 
 
 class Users(models.Model):
@@ -31,3 +31,6 @@ class Message(models.Model):
     date_time = models.DateField()
     message = models.CharField(max_length=300,null=True)
 
+class Contact_number(models.Model):
+     Phone_number=models.CharField(max_length=15,null=True)
+     name = models.CharField(max_length=15, null=True)

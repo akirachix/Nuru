@@ -1,6 +1,7 @@
 
 from rest_framework import serializers
-from nuru.models import Information, Notification, Users,Message
+from nuru.models import Information, Notification, Users,Message,Contact_number
+
 
 
 class UsersSerializer(serializers.ModelSerializer):
@@ -25,6 +26,10 @@ class MessageSerializer(serializers.ModelSerializer):
         model=Message
         fields=('Phone_number','date_time','message')
 
+class Contact_numberSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=Contact_number
+        fields=('Phone_number','name')        
 
 
 
