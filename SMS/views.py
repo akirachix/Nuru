@@ -7,7 +7,7 @@ def registration(request):
     if request.method == 'POST':
         session_id = request.POST.get('sessionId')
         short_code = request.POST.get('shortcode')
-        phone_number = request.POST.get('phoneNumber')
+        phone_number = request.POST.get('Phone_number')
         text = request.POST.get('text')
         response=""
         if text == "":
