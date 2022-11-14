@@ -15,12 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from nuru.api.views import registration_views
+from rest_framework.authtoken import views
 
-# from nuru.models import Users
-from nuru.views import(
-    registration_views,
-)
 
 
 urlpatterns =[
@@ -28,7 +24,5 @@ urlpatterns =[
     # path('nuru',include('Users')),
     path('api/',include('api.urls')),
     path('sms/',include('SMS.urls')),
-    path('api/nuru/', include('nuru_api.urls','nuru_api')),
-    path('register/', registration_views, name='register'),
-
+    path('login/', views.obtain_auth_token)
 ]
