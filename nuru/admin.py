@@ -4,7 +4,7 @@ from nuru.models import Information, Notification, Users ,Message,Contact_number
 
 # Register your models here.
 class UsersAdmin(admin.ModelAdmin):
-    list_display= ('full_name','child_name')
+    list_display= ('Full_name','child_name')
     search_fields = ('full_name', 'child_name')
 
 admin.site.register(Users, UsersAdmin)
@@ -26,7 +26,9 @@ class MessageAdmin(admin.ModelAdmin):
     search_fields = ('Phone_number','date_time','message')
 admin.site.register(Message, MessageAdmin)
 
+
 class Contact_numberAdmin(admin.ModelAdmin):
     list_display= ('Phone_number','name')
     search_fields = ('Phone_number','name')
 admin.site.register(Contact_number, Contact_numberAdmin)
+

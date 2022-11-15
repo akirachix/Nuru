@@ -5,7 +5,9 @@ from re import template
 from venv import create
 from django.shortcuts import render
 from dateutil.parser import parse
-from .form import UserRegisrationForm
+from .form import UserRegisrationForm, MessageRegisrationForm
+import africastalking
+
 
 # Create your views here.easy on me adele
 
@@ -60,7 +62,7 @@ def contact_upload(request):
         context={}
         return render(request,template,context)
 
-
+UserRegisrationForm
     
 def register_user(request):
     if request.method == "POST":
@@ -70,3 +72,26 @@ def register_user(request):
     else:
         form = UserRegisrationForm()
     return render(request,"registration/register_user.html",{"form":form})
+    
+
+
+
+
+class SMS:
+    def __init__(self):
+                self.username = "nurusms"
+                self.api_key = "cdb2accc90a1c54c800a5a64f2ee46f0e58129d076237aaafc6ab5a90891e749"
+            # Initialize the SDK
+                africastalking.initialize(self.username, self.api_key)
+            # Get the  SMS service
+                self.sms = africastalking.SMS
+    def send(self):
+            recipients = Users.full_name
+            message =(f"Hello {recipients.full_name} Welcome to NuruCare, {recipients.child_name} will be receiving her 2nd dose of BCG on {recipients.appointment_date}. #your child's health matters")
+            try:
+                response = self.sms.send(message, Users)
+                print (response)
+            except Exception as e:
+                print ('Encountered an error while sending: %s' % str(e))
+                if __name__ == '__main__':
+                 SMS().send()  
