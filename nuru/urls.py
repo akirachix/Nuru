@@ -19,7 +19,7 @@ from xml.etree.ElementInclude import include
 from django.contrib import admin
 from django.urls import path
 from django.urls import path,include
-from .views import register_user
+from .views import register_user,send_message
 # from SMS.views import 
 from .views import send
 
@@ -27,7 +27,7 @@ urlspatterns=[
     path('admin/',admin.site.urls),
     path("register/", register_user, name="registration"),
     path('nuru/',include('nuru.urls')),
-    path("message/", name="message"),
+    path("Message/",send_message, name="Message"),
     path("send/",send, name="send")
 
 ]

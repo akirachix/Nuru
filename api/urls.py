@@ -7,7 +7,7 @@ router =routers.DefaultRouter()
 router.register(r'Users',UsersViewSet),
 router.register(r'Information',InformationViewSet)
 router.register(r'Notification',NotificationViewSet)
-router.register(r'Message',MessageViewSet)
+router.register(r'Message', MessageViewSet)
 router.register(r'Contact_number',Contact_numberViewSet)
 
 

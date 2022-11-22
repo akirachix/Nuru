@@ -22,8 +22,8 @@ class NotificationAdmin(admin.ModelAdmin):
 admin.site.register(Notification, NotificationAdmin)
 
 class MessageAdmin(admin.ModelAdmin):
-    list_display= ('Phone_number','date_time','message')
-    search_fields = ('Phone_number','date_time','message')
+    list_display= ('full_name','appointment_date','child_name')
+    search_fields = ('full_name','appointment_date','child_name')
 admin.site.register(Message, MessageAdmin)
 
 

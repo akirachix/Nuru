@@ -26,11 +26,8 @@ class Notification(models.Model):
 
 class Message(models.Model):
     full_name= models.CharField(max_length=20,null=True)
-    Phone_number=models.CharField(max_length=15,null=True)
-    date_time = models.DateField()
-    message = models.CharField(max_length=300,null=True)
-    user= models.ForeignKey(to=Users,on_delete=models.CASCADE, null=True, related_name='full_name')
-
+    appointment_date = models.CharField(max_length=30, null=True)
+    child_name = models.CharField(max_length=30,null=True)
 
 class Contact_number(models.Model):
      Phone_number=models.CharField(max_length=15,null=True)
